@@ -1,3 +1,5 @@
+# server.py: simple HTTP server that serves the index.html web UI to any browser that connects to it
+
 import socket
 import sys
 
