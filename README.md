@@ -5,6 +5,10 @@
 
 ## Report
 
+Our project is a file transfer application built on top of a simple HTTP server using raw TCP sockets in Python. The base of the project is `server.py`, a simple HTTP server that serves a web page to any browser that connects to it. From there, we built a full FTP-style system with `serv.py`, a TCP server that accepts connections from `cli.py`, a command-line client with an interactive `ftp>` prompt supporting `ls`, `get`, `put`, and `quit` commands. We also built a web UI using `index.html` backed by `file_server.py`, an HTTP API server that lets users upload, download, and delete files through the browser. TCP was chosen as the transport protocol because it guarantees reliable and ordered delivery of data. All files are stored in a shared `uploads/` directory. For cloud deployment, the server is hosted on an AWS EC2 instance with the port opened in the security group, allowing the client to connect remotely using the instance's public IP address.
+
+---
+
 ### Architecture Diagram
 
 ```
